@@ -40,3 +40,24 @@ target_link_libraries(Tutorial ${EXTRA_LIBS})
 # Add install targets.
 install (TARGETS Tutorial DESTINATION bin)
 install (FILES "${PROJECT_BINARY_DIR}/TutorialConfig.h" DESTINATION include)
+
+# Basic tests go here. Consider a cppunit project for the future.
+
+# Does the application run?
+add_test(TutorialRuns Tutorial 25)
+
+# Does it calculate the square root of 25?
+add_test(TutorialComp25 Tutorial 25)
+set_tests_properties(TutorialComp25 PROPERTIES PASS_REGULAR_EXPRESION "25 is 5")
+
+# Does it handle negative numbers?
+add_test(TutorialNegative Tutorial -25)
+set_tests_properties(TutorialNegative PROPERTIES PASS_REGULAR_EXPRESSION "-25 is nan")
+
+# Does it handle small numbers?
+add_test(TutorialSmall Tutorial 0.0001)
+set_tests_properties(TutorialSmall PROPERTIES PASS_REGULAR_EXPRESSION "0.0001 is 0.01")
+
+# Does the usage message work?
+add_test(TutorialUsage Tutorial)
+set_tests_properties(TutorialUsage PROPERTIES PASS_REGULAR_EXPRESSION "Usage:.*number")
