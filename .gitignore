@@ -1,5 +1,6 @@
 *.xcodeproj/
 *.build/
+Debug/
 CMakeFiles/
 CMakeScripts/
 *.cmake
