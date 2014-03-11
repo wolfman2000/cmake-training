@@ -3,10 +3,13 @@
 #include <cstdlib>
 #include <iostream>
 #include <cmath>
+#include "TutorialConfig.h"
 
 int main (int argc, char *argv[]) {
 	using namespace std;
 	if (argc < 2) {
+        cout << argv[0] << " Version " << Tutorial_VERSION_MAJOR
+            << "." << Tutorial_VERSION_MINOR << endl;
 		cout << "Usage: " << argv[0] << " number" << endl;
 		return 1;
 	}

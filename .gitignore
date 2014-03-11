@@ -4,3 +4,4 @@ CMakeFiles/
 CMakeScripts/
 *.cmake
 CMakeCache.txt
+TutorialConfig.h
