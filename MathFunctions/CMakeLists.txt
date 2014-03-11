@@ -1,1 +1,1 @@
-add_library(MathFunctions mysqrt.cpp)
+add_library(MathFunctions mysqrt.cpp MathFunctions.hpp)
