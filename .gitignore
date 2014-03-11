@@ -1,0 +1,5 @@
+*.xcodeproj/
+CMakeFiles/
+CMakeScripts/
+*.cmake
+CMakeCache.txt
